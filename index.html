@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResultTree</title>
+
+    <script src="./assets/js/tailwind.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class=" p-4">
+        <img src="./assets/images/logo.png" style="width: 630px;height: 180px;" class=" container mx-auto" alt=""
+            srcset="">
+    </div>
+
+    <div class=" pt-12 flex justify-center items-center">
+        <input type="text" onkeyup="setNewSearchTerm(event)" class="border-2 border-gray-300 p-4 w-4/12 rounded-full "
+            placeholder="Enter Your Search Term">
+    </div>
+
+    <div class=" px-2 pt-2  flex justify-between items-center w-4/12 mx-auto">
+        <div>
+            <input class="m-1 cursor-pointer hover:bg-gray-500 p-3" type="checkbox">
+            <label class="text-gray-500" for="">Exact Match "..."</label>
+        </div>
+        <div>
+            <input class="m-1 cursor-pointer hover:bg-gray-500 p-3" type="checkbox">
+
+            <label class="text-gray-500" for="">Exact Match "..."</label>
+        </div>
+    </div>
+
+
+
+    <div class=" px-2 pt-2  flex justify-start items-center w-4/12 mx-auto gap-6">
+        <div onclick="searchGoogle()"
+            class="px-6 py-2 rounded-md hover:bg-gray-200 cursor-pointer border transition-all duration-500 border-gray-800">
+            Google</div>
+        <div onclick="searchYoutube()"
+            class="px-6 py-2 rounded-md hover:bg-gray-200 cursor-pointer border transition-all duration-500 border-gray-800">
+            Yoututbe</div>
+    </div>
+
+
+
+    <script>
+        var searchTerm = "";
+
+        function setNewSearchTerm(event) {
+            searchTerm = event.target.value;
+        }
+
+        function searchGoogle() {
+            window.open("https://www.google.com/search?q=" + searchTerm);
+        }
+
+        function searchYoutube() {
+            window.open("https://www.youtube.com/results?search_query=" + searchTerm);
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
